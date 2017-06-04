@@ -1,0 +1,170 @@
+<p>Computer graphics is an ancient discipline with roots dating back to the 1960s. 
+    By modeling light, camera, materials and shapes, we can create virtual worlds. 
+    Rendering is interdisciplinary in nature, and combines ideas from physics, math and art.</p>
+
+<div class="animation">
+    <canvas class="webgl"
+            width="960px"
+            height="500px">
+    </canvas>
+
+    <div class="label-container">
+        <label> roughess <input class="Roughness"type="range"></label>
+        <label>metalness <input class="Metallic" type="range"></label>
+        <label>albedo <input class="Albedo"type="color" value="#ffffff"></label>
+        <button class="play-pause-webgl">▶ Play</button>
+    </div>
+
+
+</div>
+
+<p>Visible light is an electromagnetic, tranverse wave.</p>
+
+<p>This means that the EM field wiggles sideways as the energy propagates forward.
+    This wiggling in the EM field, can be seen as two fields wiggling.</p>
+
+<p>But in general, you can think of light as a straight line.
+    Light rays do not interefere with each other.
+    light travels from source to the eye.</p>
+
+<p>The simplest algorithm for modeling light is called ray tracing.</p>
+
+<p>For each pixel, cast a ray from the
+    light source, to the object underneath that pixel.</p>
+
+<p>Ray tracing is an elegant technique that has
+    its origins in lens making; Gauss traced rays through lenses by hand in
+    the 19th century. Ray-tracing algorithms on computers follow the path of infinitesimal
+    rays of light through the scene until they intersect a surface. This approach gives a
+    simple method for finding the first visible object as seen from any particular position
+    and direction and is the basis for many rendering algorithms.</p>
+
+
+
+<div class="overlap" style="height:360px;">
+    <canvas  class="diff" width="960px" height='500px'></canvas>
+    <svg  class="diff under" width="960px" height='500px'></svg>
+</div>
+
+<p>In the above model, the light source is the blue concentric circle.</p>
+
+
+
+
+
+
+<h1 id="reflection">Reflection</h1>
+
+<h2 id="glossiness">Glossiness</h2>
+
+<h2 id="spd">SPD</h2>
+
+<h2 id="materials-microgeometry-microfacets">Materials, Microgeometry, microfacets</h2>
+
+<p><!-- Materials are the paint that wraps around a shape.  -->
+    <!-- There are 5 types of materials -->
+    <!-- - Matte -->
+    <!-- - Rough Metal -->
+    <!-- - Shiny Metal -->
+    <!-- - Plastic -->
+    <!-- - Shiny Plastic -->
+    <!-- freq - number of wiggles -->
+    <!-- amplitude the distance between 2 peaks -->
+    <!-- 400-700 nanometers -->
+    <!-- most light waves contain many different frequencies in it. -->
+
+    <p>Try changing the roughness of the cube above to affect the glossiness of the reflected light rays below.</p>
+
+    <ul>
+        polarizes them. stretches the positive and negative charges
+        when an EM wave hits an atom,
+        In a gas,
+        The combination of dipole interactions is too complex to accurately simulate
+        WAVE optics
+        we treat mediums as homogenous.
+        IoR - speed of light through medium and how much light
+        is absorbed by medium<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>
+        Glossmap
+        absorption determines the color
+        if it is colored, it absorbs some wave lengths more than others
+        scattering determines how cloudy the medium is
+        Surfaces
+        When modeling a surface to be rendered, we care only about a specific number of properties
+        Roughness or nanogeometry, or irregularities in the surface of the material that are smaller than the wave of light. This causes Diffraction.
+        The Huygens-Fresnel Principles
+        Plane wave -> spherical wave until it hits an optical, light bends around the corner
+        soft shadows
+        If the surface is optically smooth, diffraction results in reflectance.
+        ACTION : polish the material
+        the smaller the nano geometry, or the height of the bumps,
+        Ray Optics
+        statistical aggregate
+        Micro geometry -
+        light has a very different direction
+        light spreads out in very wide cone
+        we don’t model the micro geometry  explicitly
+        we view it statistically
+        the rougher the surface, the wider the cone
+        reflected light
+        reflectance is the process by which a ray of light interacts with a surface.
+        when light bounces off a surface, it's properties change in 3 ways
+        a bdrf must be linear, reciprocal, conserve energy, isotropic??
+        Properties of light
+        <li>Spectra and Color</li>
+        <li>Polarization</li>
+        <li>Directional distribution</li>
+        the behavior of refracted light depends on whether it is a metal.
+        Metal’s immediately absorb all refracted light because there is a sea of electrons on the surface of them.
+    </ul>
+
+    <p>nonmetals behave like cups of liquid
+        the refracted light is scattered, absorbed or both.
+    </p>
+    <div class="side-by-side">
+        <img src="/assets/diffuse3.png">
+        <img src="/assets/diffuse2.png">
+        <img src="/assets/diffuse1.png">
+    </div>
+
+    <p>if it’s transparent like glass, it will keep going all the way through.
+        but usually it will be selectively be absorbed some percentage of the time.
+        and the light that enters gets scattered at different angles
+        if the pixel size size
+        surface reflection term is specular
+        refraction, absorption, scattering and more refraction, is diffuse
+        quantify light as a number
+        Radiance measures the intensity of light along a single ray
+        spectral: rub
+        bidirectional reflectance distribution function
+        a function of l, v
+        Lo(V) = integral of omega
+        outgoing radiance = integral of incoming radiance TIMES
+        times bdrf times cosine factor
+        weighted average over incoming directions</p>
+
+
+
+
+
+
+
+
+    <h1 id="subsurface-scattering-todo">Subsurface Scattering - TODO</h1>
+
+    <h1 id="camera">Camera</h1>
+
+    <p>The essential property of a lens is that it bends radiation, to converge
+        upon a focus point.</p>
+
+
+
+
+
+    <ul>
+        <li>Field of view = Film size, focal length</li>
+        <li>Depth of feld = Aperture, focal length</li>
+        <li>Exposure = Film speed, aperture, shutter</li>
+        <li>Motion blur = Shutter speed</li>
+    </ul>
+
+

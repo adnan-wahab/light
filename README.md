@@ -1,0 +1,9 @@
+  https://github.com/antirez/jsrt
+  http://fgiesen.wordpress.com/category/graphics-pipeline/
+  http://thebookofshaders.com/
+  http://www.kevlindev.com/geometry/2D/projection_reflection.svg
+  https://www.clicktorelease.com/code/codevember-2016/19/
+  http://benedikt-bitterli.me/tantalum/
+  http://graphics.stanford.edu/courses/cs348b/lectures
+  http://www.redblobgames.com/x/1708-color-yellow/
+  http://zenphoton.com/#AAQAAkACAAEgfwACAhsAmwF6ASn/AAABDQFRArQB7v8AAA
